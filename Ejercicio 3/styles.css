@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 1.6rem;
+  margin: 20px 0;
+}
+
+nav {
+  display: flex;
+}
+
+button {
+  background-color: #006c7d;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+button:hover,
+button:focus {
+  background-color: #27495a;
+  outline: none;
+}
+
+/* pantallas grandes */
+@media (min-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  nav {
+    justify-content: space-between;
+    background-color: #006c7d;
+    height: 50px;
+  }
+}
+
+/* pantallas pequeñas  */
+@media (max-width: 767px) {
+  header {
+    padding: 5%;
+    border-style: solid;
+    border-color: black;
+    border-width: 6px 10px;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  button {
+    margin-bottom: 0;
+    height: 8vh;
+    width: 100%;
+    font-size: 1rem;
+  }
+}

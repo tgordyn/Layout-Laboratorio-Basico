@@ -1,0 +1,48 @@
+$base-color: #4c6cff;
+$important-color: #002366;
+$warning-color: #99c2ff;
+$primary-font: 'Georgia', serif;
+$secondary-font: 'Verdana', sans-serif;
+$border-radius: 10px;
+$box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.2);
+
+.theme {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+
+  .box {
+    padding: 20px;
+    margin: 10px;
+    border-radius: $border-radius;
+    box-shadow: $box-shadow;
+    font-family: $primary-font;
+    text-align: center;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &.base {
+      background-color: $base-color;
+      color: white;
+    }
+    &.important {
+      background-color: $important-color;
+      color: white;
+    }
+    &.warning {
+      background-color: $warning-color;
+      color: black;
+    }
+  }
+
+  .font-primary {
+    font-family: $primary-font;
+  }
+
+  .font-secondary {
+    font-family: $secondary-font;
+  }
+}
