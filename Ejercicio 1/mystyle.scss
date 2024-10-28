@@ -1,0 +1,46 @@
+@use "sass:color";
+
+
+body {
+  background-color: black;
+}
+
+
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  color: darkgray;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+$themes: (
+  "red": #ff0000,
+  "blue": #0000ff,
+  "green": #00ff00
+);
+
+@each $name, $base-color in $themes {
+  .#{$name + "-theme"} {
+    .darken-4 { background-color: color.scale($base-color, $lightness: -40%); }
+    .darken-3 { background-color: color.scale($base-color, $lightness: -30%); }
+    .darken-2 { background-color: color.scale($base-color, $lightness: -20%); }
+    .darken-1 { background-color: color.scale($base-color, $lightness: -10%); }
+    .base-color {background-color: $base-color; color: white}
+    .lighten-1 { background-color: color.scale($base-color, $lightness: 10%); }
+    .lighten-2 { background-color: color.scale($base-color, $lightness: 20%); }
+    .lighten-3 { background-color: color.scale($base-color, $lightness: 30%); }
+    .lighten-4 { background-color: color.scale($base-color, $lightness: 40%); }
+  }
+}
